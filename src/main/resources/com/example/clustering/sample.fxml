@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.clustering.Sample"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clustering.Sample">
+    <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <HBox alignment="TOP_CENTER" prefHeight="17.0" prefWidth="600.0">
+         <Label text="Кол-во точек:">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="points" prefWidth="100.0">
+            <HBox.margin>
+               <Insets left="3.0" right="12.0" />
+            </HBox.margin>
+         </TextField>
+         <Label text="Кол-во кластеров:">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="clusters" prefWidth="70.0">
+            <HBox.margin>
+               <Insets left="3.0" right="12.0" />
+            </HBox.margin>
+         </TextField>
+            <Button mnemonicParsing="false" onAction="#refresh" text="Go" />
+        </HBox>
+        <AnchorPane fx:id="box" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </AnchorPane>
+    </VBox>
 </AnchorPane>
