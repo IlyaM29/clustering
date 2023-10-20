@@ -28,13 +28,6 @@ public class Sample {
     public TextField points;
     @FXML
     public TextField clusters;
-    @FXML
-    private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
     @FXML
     public void refresh(ActionEvent actionEvent) {

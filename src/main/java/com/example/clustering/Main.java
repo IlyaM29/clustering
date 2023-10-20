@@ -27,20 +27,4 @@ public class Main extends Application {
 
         primaryStage.show();
     }
-
-    private static Map<Centroid, List<Record>> getClusters() {
-        return KMeans.fit(getListRecords(1000), 7, new EuclideanDistance(), 1000);
-    }
-
-    private static List<Record> getListRecords(int k) {
-        List<Record> list = new ArrayList<>();
-        for (int i = 0; i < k; i++) {
-            Map<String, Double> m = new HashMap<>();
-            m.put("x", Math.random() * 90 + 10);
-            m.put("y", Math.random() * 90 + 10);
-            Record r = new Record(m);
-            list.add(r);
-        }
-        return list;
-    }
 }
