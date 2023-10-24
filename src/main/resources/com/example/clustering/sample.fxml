@@ -11,29 +11,70 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clustering.Sample">
     <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <HBox alignment="TOP_CENTER" prefHeight="17.0" prefWidth="600.0">
-         <Label text="Кол-во точек:">
-            <font>
-               <Font size="14.0" />
-            </font>
-         </Label>
-         <TextField fx:id="points" prefWidth="100.0">
-            <HBox.margin>
-               <Insets left="3.0" right="12.0" />
-            </HBox.margin>
-         </TextField>
-         <Label text="Кол-во кластеров:">
-            <font>
-               <Font size="14.0" />
-            </font>
-         </Label>
-         <TextField fx:id="clusters" prefWidth="70.0">
-            <HBox.margin>
-               <Insets left="3.0" right="12.0" />
-            </HBox.margin>
-         </TextField>
-            <Button mnemonicParsing="false" onAction="#refresh" text="Go" />
+        <HBox alignment="TOP_CENTER">
+            <Label text="Кол-во точек:">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <TextField fx:id="numPoints" prefWidth="100.0">
+                <HBox.margin>
+                    <Insets left="3.0" right="12.0" />
+                </HBox.margin>
+            </TextField>
+            <Label text="Кол-во кластеров:">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <TextField fx:id="clusters" prefWidth="70.0">
+                <HBox.margin>
+                    <Insets left="3.0" right="12.0" />
+                </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#kmeansRefresh" text="k-means" />
+         <padding>
+            <Insets top="3.0" />
+         </padding>
         </HBox>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <Label text="Кол-во точек:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numPoints2" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets right="12.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Мин. элем.:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="minItem" prefWidth="50.0">
+               <HBox.margin>
+                  <Insets right="12.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Макс. дистанция:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="maxDist" prefWidth="50.0">
+               <HBox.margin>
+                  <Insets right="12.0" />
+               </HBox.margin>
+            </TextField>
+               <Button mnemonicParsing="false" onAction="#dbscanRefresh" text="DBSCAN" />
+         </children>
+         <padding>
+            <Insets bottom="3.0" top="3.0" />
+         </padding>
+      </HBox>
         <AnchorPane fx:id="box" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
             <opaqueInsets>
                 <Insets />

@@ -1,9 +1,5 @@
 package com.example.clustering;
 
-import com.example.clustering.kmeans.Centroid;
-import com.example.clustering.kmeans.EuclideanDistance;
-import com.example.clustering.kmeans.KMeans;
-import com.example.clustering.kmeans.Record;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
